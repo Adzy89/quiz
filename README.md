@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-This is a quiz 
+take the quizand try your luck :p
 
 ## License
 
