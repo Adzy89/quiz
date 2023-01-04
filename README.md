@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-take the quizand try your luck :p
+take the quiz and try your luck :p
 
 ## License
 

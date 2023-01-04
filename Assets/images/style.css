@@ -1,30 +1,85 @@
-*, *::before, *::after {
+* {
     box-sizing: border-box;
-    font-family: Times, 'Times New Roman', serif;
-};
+}
 
 /* added global border setting for html page */ 
 
 body {
-    padding: 0;
-    margin: 0;
-    
+    background-color: #fff;
+    background-image: linear-gradient(315deg,#fff 0%, #fff);
+    font-family: Times, 'Times New Roman', serif, 'Poppins';
+    height: 100vh;
 }
 
-#heading {
+.title {
+    margin-left: 48%;
+    margin-top: 10%;
+    font-size: 20px;
+    color: blueviolet;
+}
+
+.header-container {
+    display: flex;
+    margin-bottom: 30%;
     font-size: 10px;
-    color: purple;
+    color: blueviolet;
+    padding: 0px;
+    margin: 0px;
 }
 
-/* changed header color to purple and changed the size */
+#timer {
+    color: black; 
+    display: block;
+    margin-left: 85%;
+}
 
 
+.quiz-container {
+    align-items: center;
+    margin-left: 30%;   
+    background-color: #fff;
+    width: 600px;
+    overflow: hidden;
+    border: smooth;
+    background: linear-gradient(#648be6, #9198e5);
+}
 
+.quiz-header {
+    width: 600px;
+    padding: 4rem;
+    text-align: center;
+    margin: 0;
+    border: #fff;
+}
 
+h3{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-   
-   
+ul li {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-align: left;
+}
 
-    
+ul li label {
+    cursor: pointer;   
+}
+
+#submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 43%;
+}
 
