@@ -2,58 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Assets/images/style.css">
-    <title>Quiz App</title>
+    <title>Demo Coding Quiz</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-
-    <div class="header-container">
-        <h1>View highScores<h2 id="timer">Time: <span id="time">50</span></h2></h1>
+    
+    <header>
+        <h1 class="score-list"><a href="./score.html">View High Scores</a></h1>
+        <h2 class="timer">Time: <span id="time">50</span></h2>
+    </header>
+    
+    <div class="button-start">
+        <button type="button" id="start-button">Start Quiz</button>
     </div>
-
+   
     <div class="main"><span class ="title">Coding Quiz</span>
         <div class="question-block">
             <p class="question"></p>
         </div>
-
-    <div class="quiz-container" id="quiz">
-        <div class="quiz-header">
-            <h3 id="question">Question Text</h3>
-            <ul>
-                <li>
-                    <input type="radio" id="a" class="answer">
-                    <label for="a" id="a_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" id="b_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" id="c_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="radio" name="answer" id="d" class="answer">
-                    <label for="d" id="d_text">Answer</label>
-                </li>
-            </ul>
-
+        <div class="answerChoices">
+            <li><button class="answer-choice" id="answer1"></button></li>
+            <li><button class="answer-choice" id="answer2"></button></li>
+            <li><button class="answer-choice" id="answer3"></button></li>
+            <li><button class="answer-choice" id="answer4"></button></li>
         </div>
-
-        <button id="submit">Submit</button>
-
+        <br>
+        <div class = "returnAnswer"></div>
+        <div class="currentScore"></div>
     </div>
 
-    <br>
-    <div class = "answertext" id="answertext"></div>
-    <div class ="scoretext" id="scoretext"></div>
-   
-    <script src="Assets/script.js"></script>
+    <div class="endgame">
+        <div>
+            <h3 class="heading">All Done!</h3>
+            <p class="final-score"></p>
+        </div>
+
+        <div>
+            <div class="initial-form">
+                Enter nickname: <input type="text" id="nickname">
+                <br>
+                <br>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
