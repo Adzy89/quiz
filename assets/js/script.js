@@ -20,12 +20,12 @@ var currentTime = timer.textContent;
 var userQuestion = 0;
 
 
-var highScore = localStorage.getItem(".highScore");
+var highScore = window.localStorage.getItem("highScore");
 if (highScore === null) {
   localStorage.setItem("highScore", 0);
   highScore = 0;
 }
-var scores = JSON.parse(localStorage.getItem('scores'));
+var scores = JSON.parse(window.localStorage.getItem('highScore'));
 
 
 var questions = [{
@@ -111,8 +111,8 @@ function endGame() {
   endOfGame.style.display = "block";
   title.style.display = "none";
   
-  if (currentTime > parseInt(localStorage.getItem("highScore"))) {
-    finalScore.textContent = ("You have the new high score! Your final score is " + currentTime + ".");
+  if (currentTime > parseInt(window.localStorage.getItem("highScore"))) {
+    finalScore.textContent = ("You have the new high score! Your final score is " + highScore + ".");
   } else {
     finalScore.textContent = ("Your final score is " + currentTime + ".");
   }
@@ -121,7 +121,7 @@ function endGame() {
 
 function resetGame() {
   var nickname = document.querySelector("#nickname").value;
-  localStorage.setItem("highScore", currentTime);
+  localStorage.setItem(highScore, currentTime);
   localStorage.setItem(nickname, currentTime);
 }
 
@@ -130,16 +130,31 @@ function resetGame() {
 submitInitials.addEventListener("click", function(){
   var initials = nickname.value;
   console.log(initials, currentTime)
-  var score = {
-    name: initials,
-    score: currentTime
-  }
-  scores.push(score);
-  localStorage.setItem("scores", JSON.stringify(scores));
-  window.location.href= "index2.html";
-  
+  // var scores = {
+  //   name: initials,
+  //   score: currentTime
+  // }
+  // highScore.push(scores);
+  // window.localStorage.setItem("highScore", JSON.stringify(highScore));
+  // viewScore();
 })
 
+// var scores = {
+//   name: initials,
+//   score: currentTime
+// }
+
+// highScore.push(scores);
+//   window.localStorage.setItem("highScore", JSON.stringify(highScore));
+//   viewScore();
+
+function viewScore() {
+  highScore.push(scores);
+  window.localStorage.setItem("highScore", JSON.stringify(highScore));
+  
+  window.location = "./score.html";
+  viewScore(); 
+}
 
 startButton.addEventListener("click", function () {
   var timerStart = setInterval(function () {
