@@ -152,7 +152,7 @@ function viewScore() {
   highScore.push(scores);
   window.localStorage.setItem("highScore", JSON.stringify(highScore));
   
-  window.location = "./score.html";
+  window.location = "score.html";
   viewScore(); 
 }
 
