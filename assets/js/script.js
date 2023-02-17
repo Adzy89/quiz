@@ -130,23 +130,7 @@ function resetGame() {
 submitInitials.addEventListener("click", function(){
   var initials = nickname.value;
   console.log(initials, currentTime)
-  // var scores = {
-  //   name: initials,
-  //   score: currentTime
-  // }
-  // highScore.push(scores);
-  // window.localStorage.setItem("highScore", JSON.stringify(highScore));
-  // viewScore();
 })
-
-// var scores = {
-//   name: initials,
-//   score: currentTime
-// }
-
-// highScore.push(scores);
-//   window.localStorage.setItem("highScore", JSON.stringify(highScore));
-//   viewScore();
 
 function viewScore() {
   highScore.push(scores);
@@ -170,3 +154,5 @@ startButton.addEventListener("click", function () {
   
   quizQuestion(timerStart);
 });
+
+

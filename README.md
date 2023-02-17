@@ -32,3 +32,5 @@ no license
 ## live pages
 
 https://github.com/Adzy89/quiz
+
+https://adzy89.github.io/quiz/
